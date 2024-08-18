@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-container">
+        <nav class="navbar">
+            <!-- logo -->
+            <div class="logo-container">
+                <img src="./public/assets/images/transparent_logo.png" alt="Test Logo" class="logo">
+            </div>
+
+            <!-- navlinks -->
+            <div class="nav-links">
+                <a href="" class="nav-item">
+                    <img src="./public/assets/images/nav_home.svg" alt="Overview">
+                    Overview
+                </a>
+                <a href="" class="nav-item active">
+                    <img src="./public/assets/images/nav_people.svg" alt="Patients">
+                    Patients
+                </a>
+                <a href="" class="nav-item">
+                    <img src="./public/assets/images/nav_calender.svg" alt="Schedule">
+                    Schedule
+                </a>
+                <a href="" class="nav-item">
+                    <img src="./public/assets/images/nav_message.svg" alt="Message">
+                    Message
+                </a>
+                <a href="" class="nav-item">
+                    <img src="./public/assets/images/nav_payment.svg" alt="Transactions">
+                    Transactions
+                </a>
+            </div>
+
+            <!-- profile -->
+            <div class="nav-profile">
+                <div class="nav-profile-image">
+                    <img src="./public/assets/images/nav_profile.png" alt="profile">
+                </div>
+
+                <div class="profile-info">
+                    <p class="name">Dr. Jose Simmons</p>
+                    <p class="role">General Practitioner</p>
+                </div>
+
+                <div class="profile-settings">
+                    <button>
+                        <img src="./public/assets/images/nav_settings.svg" alt="settings">
+                    </button>
+                    <button>
+                        <img src="./public/assets/images/nav_more.svg" alt="more">
+                    </button>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+
+    <!-- grid layout -->
+    <div class="dashboard-layout-container">
+        <div class="grid grid-cols-12 gap-8 w-full">
+            <div class="col-span-3 bg-white h-screen rounded-2xl">
+                <div class="w-full flex items-center justify-between bg-white p-6">
+                    <span class="bg-white text-[072635] text-[24px] font-bold">Patients</span>
+
+                    <button class="border-none outline-none">
+                        <img src="./public/assets/images/icon_search.svg" alt="search">
+                    </button>
+                </div>
+
+                <div class="w-full mt-0 bg-white  flex flex-col gap-y-2 h-[80%] overflow-y-scroll patients-container">
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer static">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-1.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Emily Williams</span>
+                                    <span class="text-[#707070] bg-white">Female, 18</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-2.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Ryan Johnson</span>
+                                    <span class="text-[#707070] bg-white">Male, 45</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-3.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Brandon Mitchell</span>
+                                    <span class="text-[#707070] bg-white">Male, 36</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-[#D8FCF7] py-4 hover:cursor-pointer">
+                        <div class="patient-card-container flex items-center justify-between px-6 bg-[#D8FCF7]">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-[#D8FCF7]">
+                                <img src="./public/assets/images/patients/patient-4.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-[#D8FCF7]">
+
+                                <div class="flex flex-col gap-y-0 bg-[#D8FCF7]">
+                                    <span class="text-[#072635] font-bold bg-[#D8FCF7]">Jessica Taylor</span>
+                                    <span class="text-[#707070] bg-[#D8FCF7]">Female, 28</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-5.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Samantha Johnson</span>
+                                    <span class="text-[#707070] bg-white">Female, 56</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-6.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Ashley Martinez</span>
+                                    <span class="text-[#707070] bg-white">Female, 54</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-7.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Olivia Brown</span>
+                                    <span class="text-[#707070] bg-white">Female, 32</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-8.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Tyler Davis</span>
+                                    <span class="text-[#707070] bg-white">Male, 19</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-9.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Kevin Anderson</span>
+                                    <span class="text-[#707070] bg-white">Male, 30</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-10.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Dylan Thompson</span>
+                                    <span class="text-[#707070] bg-white">Male, 36</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-11.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Nathan Evans</span>
+                                    <span class="text-[#707070] bg-white">Male, 58</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- patient card -->
+                    <div class="patient-card bg-white py-4 hover:cursor-pointer">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="./public/assets/images/patients/patient-12.png" alt="patient-1"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">Mike Nolan</span>
+                                    <span class="text-[#707070] bg-white">Male, 31</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-6 min-h-screen rounded-2xl flex flex-col gap-y-8">
+                <div class="bg-white min-h-[400px] rounded-2xl p-6">
+                    <div class="bg-white">
+                        <h4 class="bg-white text-[24px] text-[#072635] font-bold">Diagnosis History</h4>
+                        <!-- chart -->
+                        <div class="bg-[#F4F0FE] min-h-[200px] w-full rounded-2xl mt-6 flex p-4 gap-x-8">
+                            <!-- <canvas id="myChart" class="w-full">
+                                <p>Hello Fallback World</p>
+                            </canvas> -->
+
+                            <div class="w-4/6 bg-[#F4F0FE]">
+                                <div class="w-full flex items-center justify-between bg-[#F4F0FE]">
+                                    <h4 class="bg-[#F4F0FE] text-[#072635] text-[18px] font-bold ">Blood Pressure</h4>
+
+                                    <div class="flex items-center gap-2 bg-[#F4F0FE]">
+                                        <span class="bg-[#F4F0FE] text-[14px]">Last 6 Months</span>
+                                        <img src="./public/assets/images/ArrowDown.svg" alt="dropdown"
+                                            class="bg-[#F4F0FE]">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <canvas id="myChart" class="w-full mt-4">
+                                        <p>Hello Fallback World</p>
+                                    </canvas>
+                                </div>
+                            </div>
+
+                            <div class="w-2/6 bg-[#F4F0FE] flex flex-col gap-y-4">
+                                <div>
+                                    <div class="flex items-center gap-2 bg-[#F4F0FE]">
+                                        <div class="bg-[#E66FD2] rounded-full p-2"></div>
+                                        <span class="font-bold text-[14px] bg-[#F4F0FE]">Systolic</span>
+                                    </div>
+
+                                    <div class="flex flex-col gap-y-0 bg-[#F4F0FE]">
+                                        <span class="bg-[#F4F0FE] text-[22px] font-bold" id="systolic-pressure">
+                                            140
+                                        </span>
+
+                                        <div class="flex items-center gap-2 bg-[#F4F0FE]">
+                                            <img src="./public/assets/images/ArrowDown.svg" alt="arrow up"
+                                                class="rotate-[180deg] bg-[#F4F0FE]">
+                                            <p id="systolic-pressure-levels" class="bg-[#F4F0FE]">Higher than Average
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full py-0 bg-gray-500/40 h-[1px] my-0">
+
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 bg-[#F4F0FE]">
+                                        <div class="bg-[#8C6FE6] rounded-full p-2"></div>
+                                        <span class="font-bold text-[14px] bg-[#F4F0FE]">Diastolic</span>
+                                    </div>
+
+                                    <div class="flex flex-col gap-y-0 bg-[#F4F0FE]">
+                                        <span class="bg-[#F4F0FE] text-[22px] font-bold" id="diastolic-pressure">
+                                            140
+                                        </span>
+
+                                        <div class="flex items-center gap-2 bg-[#F4F0FE]">
+                                            <img src="./public/assets/images/ArrowDown.svg" alt="arrow up"
+                                                class="rotate-[180deg] bg-[#F4F0FE]">
+                                            <p class="bg-[#F4F0FE]" id="diastolic-pressure-levels">Higher than Average
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- dignoiss levels -->
+                        <div class="bg-white flex justify-between gap-x-4 mt-6">
+                            <div class="w-1/3 bg-[#E0F3FA] rounded-2xl min-h-[200px] p-4">
+                                <div class="p-1 bg-white rounded-full w-fit">
+                                    <img src="./public/assets/images/respiratory-rate.png" alt="respiratory-rate"
+                                        class="w-[80px] h-[80px] w-fit bg-white rounded-full">
+                                </div>
+
+                                <div class="bg-[#E0F3FA] mt-4">
+                                    <h3 class="text-[#072635] bg-[#E0F3FA] text-[16px]">Respiratory Rate</h3>
+                                    <h4 class="text-[#072635] font-bold text-[30px] bg-[#E0F3FA]" id="respiratory-rate">
+                                        24 bpm</h4>
+                                    <h3 class="text-[#072635] bg-[#E0F3FA] text-[14px] mt-4" id="respiratory-levels">
+                                        Normal</h3>
+                                </div>
+                            </div>
+
+                            <div class="w-1/3 bg-[#FFE6E9] rounded-2xl min-h-[200px] p-4">
+                                <div class="p-1 bg-white rounded-full w-fit">
+                                    <img src="./public/assets/images/temperature.png" alt="temperature"
+                                        class="w-[80px] h-[80px] w-fit bg-white rounded-full">
+                                </div>
+
+                                <div class="bg-[#FFE6E9] mt-4">
+                                    <h3 class="text-[#072635] bg-[#FFE6E9] text-[16px]">Temperature</h3>
+                                    <h4 class="text-[#072635] font-bold text-[30px] bg-[#FFE6E9]" id="temperature">
+                                        98.6°F</h4>
+                                    <h3 class="text-[#072635]  bg-[#FFE6E9] text-[14px] mt-4 flex items-center gap-2">
+                                        <img src="./public/assets/images/ArrowDown.svg" alt="down-arrow"
+                                            class="rotate-[180deg]">
+
+                                        <span id="temperature-levels" class="bg-[#FFE6E9]">
+                                            Lower than Average
+                                        </span>
+
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="w-1/3 bg-[#FFE6F1] rounded-2xl min-h-[200px] p-4">
+                                <div class="p-1 bg-white rounded-full w-fit">
+                                    <img src="./public/assets/images/heart-bpm.png" alt="heart-bpm"
+                                        class="w-[80px] h-[80px] w-fit bg-white rounded-full">
+                                </div>
+
+                                <div class="bg-[#FFE6F1] mt-4">
+                                    <h3 class="text-[#072635] bg-[#FFE6F1] text-[16px]">Heart Rate</h3>
+                                    <h4 class="text-[#072635] font-bold text-[30px] bg-[#FFE6F1]" id="heart-rate">78 bpm
+                                    </h4>
+                                    <h3 class="text-[#072635] bg-[#FFE6F1] text-[14px] mt-4 flex items-center gap-2">
+                                        <img src="./public/assets/images/ArrowDown.svg" alt="down-arrow" class="">
+
+                                        <span id="heart-rate-levels" class="bg-[#FFE6F1]">
+                                            Lower than Average
+                                        </span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl">
+                    <div class="w-full bg-white rounded-t-2xl p-6">
+                        <span class="text-[072635] text-[24px] font-bold bg-white">Diagonstic List</span>
+                    </div>
+
+
+
+                    <div class="h-[200px] overflow-y-scroll patients-container bg-white grid grid-rows-12 gap-y-12 rounded-b-2xl"
+                        id="diagonosticListContainer">
+                        <div class="bg-white px-6">
+                            <div class="grid grid-cols-12  p-4 group gap-14 bg-[#F6F7F8] rounded-full">
+                                <div class="text-[#072635] text-[14px] font-bold bg-[#F6F7F8] col-span-3 rounded-full">
+                                    Problem/Diagnosis
+                                </div>
+                                <div class="text-[#072635] text-[14px] font-bold bg-[#F6F7F8] col-span-6">
+                                    Description
+                                </div>
+                                <div class="text-[#072635] text-[14px] font-bold bg-[#F6F7F8] col-span-3">
+                                    Status
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="grid grid-cols-12 mx-8 p-4 pb-10 group bg-white gap-16">
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Hypertentsion
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-6">
+                                Chronic high blood pressure
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Under Observation
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-12 mx-8 p-4 pb-10 group bg-white gap-16">
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Type 2 Diabetes
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-6">
+                                Insulin resistance and elevated blood sugar
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Cured
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-12 mx-8 p-4 pb-10 group bg-white gap-16">
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Asthma
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-6">
+                                Recurrent episodes of bronchial constriction
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Inactive
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-12 mx-8 p-4 pb-10 group bg-white gap-16">
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Asthma
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-6">
+                                Recurrent episodes of bronchial constriction
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Inactive
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-12 mx-8 p-4 pb-10 group bg-white gap-16">
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Asthma
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-6">
+                                Recurrent episodes of bronchial constriction
+                            </div>
+                            <div class="text-[#072635] text-[14px] bg-white col-span-3">
+                                Inactive
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-3 min-h-[1200px] rounded-t-2xl flex-col ">
+                <div class="bg-white rounded-2xl flex flex-col justify-between">
+                    <div class="w-full flex items-center justify-center bg-white py-8 flex-col gap-y-4 rounded-2xl">
+                        <img src="./public/assets/images/patients/patient-profile-4.png" alt="Jessica Taylor"
+                            class="bg-white w-[200px] h-[200px] object-contain">
+                        <span class="text-[072635] text-[24px] font-bold bg-white" id="patient-name">Jessica
+                            Taylor</span>
+                    </div>
+
+                    <div class="bg-white px-6 pb-10 flex flex-col gap-y-6 rounded-b-2xl">
+                        <div class="flex items-center gap-x-4 bg-white">
+                            <div class="bg-[#F6F7F8] p-2 rounded-full">
+                                <img src="./public/assets/images/nav_calender.svg" alt="date of birth"
+                                    class="w-[24px] h-[24px]">
+                            </div>
+
+
+                            <div class="flex flex-col bg-white">
+                                <span class="text-[14px] bg-white">Date Of Birth</span>
+                                <span class="text-[14px] font-bold bg-white" id="patient-dob">August 23, 1996</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-x-4 bg-white">
+                            <div class="bg-[#F6F7F8] p-0 rounded-full">
+                                <img src="./public/assets/images/female-icon.png" alt="Female"
+                                    class="w-[40px] rounded-full h-[40px] rounded-full">
+                            </div>
+
+
+                            <div class="flex flex-col bg-white">
+                                <span class="text-[14px] bg-white">Gender</span>
+                                <span class="text-[14px] font-bold bg-white" id="gender">Female</span>
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center gap-x-4 bg-white">
+                            <div class="bg-[#F6F7F8] p-0 rounded-full">
+                                <img src="./public/assets/images/phone-icon.png" alt="phonew"
+                                    class="w-[40px] rounded-full h-[40px] rounded-full">
+                            </div>
+
+
+                            <div class="flex flex-col bg-white">
+                                <span class="text-[14px] bg-white">Contact Info.</span>
+                                <span class="text-[14px] font-bold bg-white" id="phone">(415) 555-1234</span>
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center gap-x-4 bg-white">
+                            <div class="bg-[#F6F7F8] p-0 rounded-full">
+                                <img src="./public/assets/images/phone-icon.png" alt="phone"
+                                    class="w-[40px] rounded-full h-[40px] rounded-full">
+                            </div>
+
+
+                            <div class="flex flex-col bg-white">
+                                <span class="text-[14px] bg-white">Emergency Contacts</span>
+                                <span class="text-[14px] font-bold bg-white" id="phone">(415) 555-5678</span>
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center gap-x-4 bg-white">
+                            <div class="bg-[#F6F7F8] p-0 rounded-full">
+                                <img src="./public/assets/images/insurance-icon.png" alt="Insurance"
+                                    class="w-[40px] rounded-full h-[40px] rounded-full">
+                            </div>
+
+
+                            <div class="flex flex-col bg-white">
+                                <span class="text-[14px] bg-white">Insurance Provider</span>
+                                <span class="text-[14px] font-bold bg-white" id="insurance-provider">Sunrise Health
+                                    Assurance</span>
+                            </div>
+
+                        </div>
+
+                        <div class="w-full bg-white flex items-center justify-center mt-4">
+                            <button
+                                class="outline-none border-none bg-[#01F0D0] rounded-full px-12 py-3 text-[14px] font-bold">
+                                Show All
+                                Information
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white h-20 mt-10 rounded-2xl">
+                    <div class="w-full flex items-center justify-between bg-white p-6 rounded-t-2xl">
+                        <span class="bg-white text-[072635] text-[24px] font-bold">Lab Results</span>
+                    </div>
+
+                    <div class="w-full mt-0 bg-white  flex flex-col gap-y-0 h-[200px] overflow-y-scroll patients-container"
+                        id="lab-results-container">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js"
+            ></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./script.js"></script>
+
+
+</body>
+
+</html>
