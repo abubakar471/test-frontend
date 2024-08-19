@@ -63,7 +63,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (data) {
         // set name
-        document.getElementById("patient-name").textContent = data?.name;
+        document.getElementById('selected-patient-info').innerHTML = `   <img src="./public/assets/images/patients/patient-profile-4.png" alt="Jessica Taylor"
+                            class="bg-white w-[200px] h-[200px] object-contain">
+                        <span class="text-[072635] text-[24px] font-bold bg-white" id="patient-name">Jessica
+                            Taylor</span>`
+        // document.getElementById("patient-name").textContent = data?.name;
 
         // set date of birth
         let date_dob = new Date(data?.date_of_birth);
