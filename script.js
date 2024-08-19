@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                                 <div class="flex flex-col gap-y-0 bg-[#D8FCF7]">
                                     <span class="text-[#072635] font-bold bg-[#D8FCF7]">${item?.name}</span>
-                                    <span class="text-[#707070] bg-[#D8FCF7]">${item?.gender}, ${item?.age}<</span>
+                                    <span class="text-[#707070] bg-[#D8FCF7]">${item?.gender}, ${item?.age}</span>
                                 </div>
                             </div>
 
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // set name
         document.getElementById('selected-patient-info').innerHTML = `   <img src="${data?.profile_picture}" alt="Jessica Taylor"
                             class="bg-white w-[200px] h-[200px] object-contain">
-                        <span class="text-[072635] text-[24px] font-bold bg-white" id="patient-name">${data?.name}</span>`
+                        <span class="text-[072635] text-[24px] font-bold bg-white text-center" id="patient-name">${data?.name}</span>`
 
         // set date of birth
         let date_dob = new Date(data?.date_of_birth);
