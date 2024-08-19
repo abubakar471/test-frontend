@@ -72,8 +72,8 @@
 
     <!-- grid layout -->
     <div class="dashboard-layout-container">
-        <div class="grid grid-cols-12 gap-8 w-full">
-            <div class="col-span-3 bg-white h-screen rounded-2xl">
+        <div class="grid grid-cols-12 gap-8 w-full relative min-h-[1000px] pb-20 mb-32">
+            <div class="col-span-3 bg-white h-[1100px] rounded-2xl">
                 <div class="w-full flex items-center justify-between bg-white p-6 rounded-2xl">
                     <span class="bg-white text-[072635] text-[24px] font-bold">Patients</span>
 
@@ -82,32 +82,13 @@
                     </button>
                 </div>
 
-                <div class="w-full mt-0 bg-white  flex flex-col gap-y-2 h-[80%] overflow-y-scroll patients-container" id="patients-cards-container">
+                <div class="w-full mt-0 bg-white  flex flex-col gap-y-2 h-[90%] overflow-y-scroll patients-container"
+                    id="patients-cards-container">
 
-                    <!-- patient card -->
-                    <!-- <div class="patient-card bg-[#D8FCF7] py-4 hover:cursor-pointer">
-                        <div class="patient-card-container flex items-center justify-between px-6 bg-[#D8FCF7]">
-                            <div class="flex items-center gap-x-3 gap-y-2 bg-[#D8FCF7]">
-                                <img src="./public/assets/images/patients/patient-4.png" alt="patient-1"
-                                    class="w-[48px] h-[48px] object-cover bg-[#D8FCF7]">
-
-                                <div class="flex flex-col gap-y-0 bg-[#D8FCF7]">
-                                    <span class="text-[#072635] font-bold bg-[#D8FCF7]">Jessica Taylor</span>
-                                    <span class="text-[#707070] bg-[#D8FCF7]">Female, 28</span>
-                                </div>
-                            </div>
-
-                            <button class="border-none outline-none rotate-[90deg] px-4">
-                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
-                            </button>
-                        </div>
-                    </div> -->
-
-                  
                 </div>
             </div>
 
-            <div class="col-span-6 min-h-screen rounded-2xl flex flex-col gap-y-8">
+            <div class="col-span-6 h-[1100px]  rounded-2xl flex flex-col gap-y-8">
                 <div class="bg-white min-h-[400px] rounded-2xl p-6">
                     <div class="bg-white">
                         <h4 class="bg-white text-[24px] text-[#072635] font-bold">Diagnosis History</h4>
@@ -243,14 +224,14 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl">
+                <div class="bg-white rounded-2xl grow relative">
                     <div class="w-full bg-white rounded-t-2xl p-6">
                         <span class="text-[072635] text-[24px] font-bold bg-white">Diagonstic List</span>
                     </div>
 
 
 
-                    <div class="h-[200px] overflow-y-scroll patients-container bg-white grid grid-rows-12 gap-y-12 rounded-b-2xl"
+                    <div class="min-h-[100px] max-h-[300px] overflow-y-scroll patients-container bg-white grid grid-rows-12 gap-y-12 rounded-b-2xl"
                         id="diagonosticListContainer">
                         <div class="bg-white px-6">
                             <div class="grid grid-cols-12  p-4 group gap-14 bg-[#F6F7F8] rounded-full">
@@ -269,12 +250,13 @@
                 </div>
             </div>
 
-            <div class="col-span-3 min-h-[100px] rounded-t-2xl flex-col ">
+            <div class="col-span-3 rounded-t-2xl flex-col ">
                 <div class="bg-white rounded-2xl flex flex-col justify-between">
-                    <div class="w-full flex items-center justify-center bg-white py-8 flex-col gap-y-4 rounded-2xl" id="selected-patient-info">
+                    <div class="w-full flex items-center justify-center bg-white pt-[32px] pl-[83px] pr-[84px]  flex-col gap-y-4 rounded-2xl"
+                        id="selected-patient-info">
                     </div>
 
-                    <div class="bg-white px-6 pb-10 flex flex-col gap-y-6 rounded-b-2xl">
+                    <div class="bg-white pt-8 px-6 pb-10 flex flex-col gap-y-6 rounded-b-2xl">
                         <div class="flex items-center gap-x-4 bg-white">
                             <div class="bg-[#F6F7F8] p-2 rounded-full">
                                 <img src="./public/assets/images/nav_calender.svg" alt="date of birth"
@@ -360,10 +342,11 @@
                         <span class="bg-white text-[072635] text-[24px] font-bold">Lab Results</span>
                     </div>
 
-                    <div class="w-full mt-0 bg-white  flex flex-col gap-y-0 h-[200px] overflow-y-scroll patients-container"
-                        id="lab-results-container">
+                    <div class="px-4 bg-white rounded-b-2xl pb-4">
+                        <div class="w-full mt-0 bg-white flex flex-col gap-y-0 h-[200px] overflow-y-scroll patients-container"
+                            id="lab-results-container">
 
-
+                        </div>
                     </div>
                 </div>
             </div>

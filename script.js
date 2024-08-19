@@ -34,23 +34,45 @@ document.addEventListener("DOMContentLoaded", async () => {
         const patientsList = response.map((item, index) => {
             const div = document.createElement('div');
 
-            div.innerHTML = `  <div class="patient-card bg-white py-4 hover:cursor-pointer static">
-                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
-                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+            if (item?.name === 'Jessica Taylor') {
+                div.innerHTML = `<div class="patient-card bg-[#D8FCF7] py-4 hover:cursor-pointer">
+                        <div class="patient-card-container flex items-center justify-between px-6 bg-[#D8FCF7]">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-[#D8FCF7]">
                                 <img src="${item?.profile_picture}" alt="${item?.name}"
-                                    class="w-[48px] h-[48px] object-cover bg-white">
+                                    class="w-[48px] h-[48px] object-cover bg-[#D8FCF7]">
 
-                                <div class="flex flex-col gap-y-0 bg-white">
-                                    <span class="text-[#072635] font-bold bg-white">${item?.name}</span>
-                                    <span class="text-[#707070] bg-white">${item?.gender}, ${item?.age}</span>
+                                <div class="flex flex-col gap-y-0 bg-[#D8FCF7]">
+                                    <span class="text-[#072635] font-bold bg-[#D8FCF7]">${item?.name}</span>
+                                    <span class="text-[#707070] bg-[#D8FCF7]">${item?.gender}, ${item?.age}<</span>
                                 </div>
                             </div>
 
                             <button class="border-none outline-none rotate-[90deg] px-4">
-                                 <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                                <img src="./public/assets/images/nav_more.svg" alt="more" class="">
                             </button>
                         </div>
-                    </div>`;
+                    </div> `
+            } else {
+                div.innerHTML = `  <div class="patient-card bg-white py-4 hover:cursor-pointer static">
+                <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                    <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                        <img src="${item?.profile_picture}" alt="${item?.name}"
+                            class="w-[48px] h-[48px] object-cover bg-white">
+
+                        <div class="flex flex-col gap-y-0 bg-white">
+                            <span class="text-[#072635] font-bold bg-white">${item?.name}</span>
+                            <span class="text-[#707070] bg-white">${item?.gender}, ${item?.age}</span>
+                        </div>
+                    </div>
+
+                    <button class="border-none outline-none rotate-[90deg] px-4">
+                         <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                    </button>
+                </div>
+            </div>`;
+            }
+
+
 
             return div;
         })
@@ -86,7 +108,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const lab_results = data?.lab_results?.map((item, index) => {
             const div = document.createElement('div');
-            div.classList.add('lab-results-card', 'flex', 'items-center', 'justify-between', 'px-4', 'py-4', 'mx-6', 'rounded-lg', 'group', 'bg-white', 'hover:bg-[#F6F7F8]', 'transition-all', 'duration-300', 'ease-in-out', 'cursor-pointer');
+            div.classList.add('lab-results-card', 'flex', 'items-center', 'justify-between', 'px-6', 'py-4', 'mx-0', 'rounded-lg', 'group', 'bg-white', 'hover:bg-[#F6F7F8]', 'transition-all', 'duration-300', 'ease-in-out', 'cursor-pointer');
             div.innerHTML = `
             <p class="bg-white group-hover:bg-[#F6F7F8] transition-all duration-300 ease-in-out">
               ${item}
