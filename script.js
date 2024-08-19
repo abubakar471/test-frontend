@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (data) {
         // set name
-        document.getElementById('selected-patient-info').innerHTML = `   <img src="${data?.profile_picture}" alt="Jessica Taylor"
+        document.getElementById('selected-patient-info').innerHTML = `<img src="${data?.profile_picture}" alt="Jessica Taylor"
                             class="bg-white w-[200px] h-[200px] object-contain">
                         <span class="text-[072635] text-[24px] font-bold bg-white text-center" id="patient-name">${data?.name}</span>`
 
