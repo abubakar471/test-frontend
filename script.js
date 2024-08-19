@@ -27,13 +27,47 @@ document.addEventListener("DOMContentLoaded", async () => {
     const response = await fetchData();
     const data = response[3];
 
+    if (response) {
+        // setting patients list
+        let patientsCardsContainer = document.getElementById("patients-cards-container");
+
+        const patientsList = response.map((item, index) => {
+            const div = document.createElement('div');
+
+            div.innerHTML = `  <div class="patient-card bg-white py-4 hover:cursor-pointer static">
+                        <div class="patient-card-container bg-white flex items-center justify-between px-6">
+                            <div class="flex items-center gap-x-3 gap-y-2 bg-white">
+                                <img src="${item?.profile_picture}" alt="${item?.name}"
+                                    class="w-[48px] h-[48px] object-cover bg-white">
+
+                                <div class="flex flex-col gap-y-0 bg-white">
+                                    <span class="text-[#072635] font-bold bg-white">${item?.name}</span>
+                                    <span class="text-[#707070] bg-white">${item?.gender}, ${item?.age}</span>
+                                </div>
+                            </div>
+
+                            <button class="border-none outline-none rotate-[90deg] px-4">
+                                 <img src="./public/assets/images/nav_more.svg" alt="more" class="">
+                            </button>
+                        </div>
+                    </div>`;
+
+            return div;
+        })
+
+        if (patientsList) {
+            patientsCardsContainer.append(...patientsList);
+        }
+
+    }
+
     if (data) {
         // set name
         document.getElementById("patient-name").textContent = data?.name;
 
         // set date of birth
         let date_dob = new Date(data?.date_of_birth);
-        console.log()
+
         document.getElementById("patient-dob").textContent = date_dob?.toDateString()?.slice(4,);
 
         // set gender
@@ -71,7 +105,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const diagonosticListContainer = document.getElementById('diagonosticListContainer');
         const diagonosticList = data?.diagnostic_list?.map((item, index) => {
             const div = document.createElement('div');
-            // div.classList.add('grid', 'grid-cols-12', 'mx-8', 'p-4', 'pb-10', 'group', 'bg-white', 'gap-16');
 
             div.innerHTML = ` <div class="grid grid-cols-12 mx-8 p-4 pb-10 group bg-white gap-16">
                             <div class="text-[#072635] text-[14px] bg-white col-span-3">
@@ -108,11 +141,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.getElementById("systolic-pressure-levels").textContent = item?.blood_pressure?.diastolic?.levels
         })
 
-
-
-        // Chart.defaults.backgroundColor = '#F4F0FE';
-        // Chart.defaults.borderColor = '#36A2EB';
-        // Chart.defaults.color = '#000';
         let dataSetsDataBloodPressure = [];
         data?.diagnosis_history?.map((item, index) => {
             if (item?.year === 2023 || item?.year === 2024) {
@@ -121,18 +149,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         })
 
 
-
-        let dataSetsData = [
-            // { x: "Oct, 2023", systolic: 120, diastolic: 100 },
-            // { x: "Nov, 2023", systolic: 118, diastolic: 65 },
-            // { x: "Dec, 2023", systolic: 160, diastolic: 103 },
-            // { x: "Jan, 2024", systolic: 116, diastolic: 94 },
-            // { x: "Feb, 2024", systolic: 145, diastolic: 74 },
-            // { x: "Mar, 2024", systolic: 157, diastolic: 78 },
-        ];
+        let dataSetsData = [];
 
         dataSetsDataBloodPressure.slice(9)?.map((item) => {
-            console.log(item)
             dataSetsData?.unshift({
                 x: `${item?.month?.slice(0, 3)}, ${item?.year}`,
                 systolic: `${item?.blood_pressure?.systolic?.value}`,
@@ -166,6 +185,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             config
         )
     }
+
+
+
 
 
 })
